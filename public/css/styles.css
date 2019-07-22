@@ -51,3 +51,7 @@ button{
     color:white;
     cursor: pointer;
 }
+#messageOne{
+    margin: 16px;
+    font-size: 48px;
+}

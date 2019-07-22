@@ -2,7 +2,7 @@ const request = require('request')
 const parser = require('node-html-parser')
 
 const converter = (from,to,fromVal,callback)=>{
-    const conv = from+'_'+to
+    const conv = from.toUpperCase().trim()+'_'+to.toUpperCase().trim()
     const url = 'https://free.currconv.com/api/v7/convert?q='+conv+'&compact=ultra&apiKey=52c2ace65f3970098569'
     request({url,json:true},(error,{body})=>{
         if(error){
@@ -14,7 +14,7 @@ const converter = (from,to,fromVal,callback)=>{
         callback(undefined,convVal)
         }
         else{
-            return callback('Please enter a valid value',undefined)
+            return callback('Please enter a valid currency',undefined)
         }
 
     })

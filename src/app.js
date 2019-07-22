@@ -43,13 +43,13 @@ app.get('/about',(req,res)=>{
 })
 
 app.get('/convert',(req,res)=>{
-    if(!req.query.from||req.query.to){
+    if(!req.query.from||!req.query.to){
       return  res.send({error:'Please provide a from or to cuurency'})
     }
     if(!req.query.fromval){
-        return req.send({error:'Please provide a conversion value'})
+        return res.send({error:'Please provide a conversion value'})
     }
-    converter(from,to,fromval,(error,response)=>{
+    converter(req.query.from,req.query.to,req.query.fromval,(error,response)=>{
         if(error){
             return res.send({error})
         }
@@ -57,6 +57,21 @@ app.get('/convert',(req,res)=>{
     })
 })
 
+app.get('/help/*',(req,res)=>{
+    res.render('404page',{
+        title:'Page not found',
+        name:'Arun',
+        errorMessage:'The help page can\'t be found'
+    })
+})
+
+app.get('/*',(req,res)=>{
+    res.render('404page',{
+        title:'Page not found',
+        name:'Arun',
+        errorMessage:'The page you are looking for could not be found :('
+    })
+})
 
 app.listen(port,()=>{
     console.log('Server started on port'+port)
