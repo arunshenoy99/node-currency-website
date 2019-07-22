@@ -1,0 +1,53 @@
+body{
+   max-width: 650px;
+   color:#333333;
+   font-family: arial;
+   margin: 0 auto;
+   padding: 0 16px;
+
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+.main-content{
+    flex-grow: 1;
+}
+
+footer{
+    color:#888888;
+    margin-top:16px;
+    border-top:1px solid #eeeeee;
+    padding: 16px 0;
+}
+header{
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+h1{
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+header a{
+    color:#888888;
+    text-decoration: none;
+    padding: 16px;
+}
+header a:hover{
+    color:#444444;
+}
+.portrait{
+    width:250px;
+}
+#currencyForm input{
+    margin: 16px;
+    height: 50px;
+    width: 250px;
+    padding: 16px;
+}
+button{
+    margin: 16px;
+    padding: 16px;
+    border: 1px solid #888888;
+    color:white;
+    cursor: pointer;
+}

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <form id="currencyForm">
+                <input type="text" placeholder="From"><br>
+                <input type="text" placeholder="To"><br>
+                <input type="number" placeholder="Value"><br>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="messageOne"></p>
+        </div>
+        {{>footer}}
+        <script src="/js/app.js"></script>
+    </body>
+</html>
