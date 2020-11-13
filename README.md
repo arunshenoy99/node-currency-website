@@ -1,1 +1,1 @@
-Access the API at https://shenoy-currency-website.herokuapp.com/
+A simple website to convert currency from one format to another.
